@@ -11,7 +11,8 @@ from argparse import ArgumentParser
 
 def setup_environment(ns):
     os.environ["CONFIG"] = ns.config
-    os.environ["UPLOAD_PACKAGES"] = "False"
+    os.environ["UPLOAD_PACKAGES"] = "True"
+    os.environ["CONDA_FORGE_DOCKER_RUN_ARGS"] = "--network=host"
 
 
 def run_docker_build(ns):
